@@ -1,12 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:fruits_market/features/Auth/domain/models/user_model.dart';
 import 'package:fruits_market/features/Auth/domain/respotries/auth_repo.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthRepoImpl extends AuthRepo {
   @override
-  Future completeInformation(
+  Future<Either<Exception , UserModel>> completeInformation(
       {String? name, String? phoneNumber, String? address}) {
     throw UnimplementedError();
   }
