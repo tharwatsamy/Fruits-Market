@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_market/features/Auth/presentation/manger/cubit/auth_cubit.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 import 'features/splash/presentation/splash_view.dart';
@@ -18,7 +20,10 @@ class FruitsMarket extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      home: BlocProvider(
+        create: (context) => AuthCubit(),
+        child: SplashView(),
+      ),
     );
   }
 }

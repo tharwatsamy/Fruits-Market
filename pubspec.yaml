@@ -29,6 +29,7 @@ dependencies:
   firebase_core: ^1.6.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
   flutter_facebook_auth: ^3.5.2
   font_awesome_flutter: ^9.1.0
   get: ^4.3.8
